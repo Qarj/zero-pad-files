@@ -4,7 +4,7 @@ import time
 import os
 import argparse
 import sys
-version = "0.1.0"
+version = "0.2.0"
 
 
 # Flags
@@ -76,14 +76,7 @@ def zero_pad_file(entry):
     new_name = entry.name
     zero_pad_count = 0
 
-    find_numbers = re.search(r'([0-9]+)', entry.name)
-    if find_numbers:
-        match = find_numbers.group(1)
-        if len(match) == 1:
-            zero_padded = '0' + str(match)
-            # print(f'match is {match}')
-            # print(f'zero padded is {zero_padded}')
-            new_name = new_name.replace(match, zero_padded)
+    new_name = build_new_name(entry.name)
 
     new_path = os.path.dirname(entry.path) + '/' + new_name
 
@@ -96,6 +89,34 @@ def zero_pad_file(entry):
 
     output(info)
     return zero_pad_count
+
+
+def build_new_name(name):
+    built = ''
+    for pos in range(0, len(name)):
+        if char_is_digit(name, pos) and prev_char_not_digit(name, pos) and next_char_not_digit(name, pos):
+            built += '0'
+        built += name[pos]
+
+    return built
+
+
+def char_is_digit(name, pos):
+    return name[pos].isdigit()
+
+
+def prev_char_not_digit(name, pos):
+    prev = pos - 1
+    if prev < 0:
+        return True
+    return not name[prev].isdigit()
+
+
+def next_char_not_digit(name, pos):
+    following = pos + 1
+    if following > len(name) - 1:
+        return True
+    return not name[following].isdigit()
 
 
 parser = argparse.ArgumentParser(
