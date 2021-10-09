@@ -1,0 +1,10 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[python]": {
+        "editor.defaultFormatter": null
+    },
+    "python.formatting.autopep8Args": ["--max-line-length=135"],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "python.pythonPath": "/home/tim/miniconda3/bin/python"
+}
