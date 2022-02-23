@@ -3,8 +3,8 @@
     "[python]": {
         "editor.defaultFormatter": null
     },
-    "python.formatting.autopep8Args": ["--max-line-length=135"],
+    "python.formatting.provider": "black",
+    "python.formatting.autopep8Args": ["--max-line-length=120"],
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "python.pythonPath": "/home/tim/miniconda3/bin/python"
+    "editor.formatOnPaste": false
 }

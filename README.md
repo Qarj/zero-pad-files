@@ -1,5 +1,8 @@
 # zero-pad-files
 
+[![GitHub Super-Linter](https://github.com/Qarj/zero-pad-files/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+![Tests](https://github.com/Qarj/zero-pad-files/workflows/Tests/badge.svg)
+
 Zero pad numbers in file names to make them two digits: Page1.pdf -> Page01.pdf
 
 Use case example - you have 12 files named as follows
@@ -84,5 +87,5 @@ zero --version
 ```sh
 cd $HOME/git/zero-pad-files
 chmod +x test_zero.py
-./test_zero.py
+python test_zero.py
 ```
