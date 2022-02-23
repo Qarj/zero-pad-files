@@ -3,11 +3,11 @@
 [![GitHub Super-Linter](https://github.com/Qarj/zero-pad-files/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 ![Tests](https://github.com/Qarj/zero-pad-files/workflows/Tests/badge.svg)
 
-Zero pad numbers in file names to make them two digits: Page1.pdf -> Page01.pdf
+Zero pad numbers in filenames to make them two digits: `Page1.pdf` -> `Page01.pdf`
 
 Use case example - you have 12 files named as follows
 
-```
+```sh
 assign_10.pdf
 assign_11.pdf
 assign_12.pdf
@@ -24,7 +24,7 @@ assign_9.pdf
 
 You want them to be named like this for processing in alphabetical order
 
-```
+```sh
 assign_01.pdf
 assign_02.pdf
 assign_03.pdf
@@ -43,25 +43,25 @@ assign_12.pdf
 
 Trial mode:
 
-```
+```sh
 zero --path test/set01 --trial
 ```
 
 Rename the files:
 
-```
+```sh
 zero --path test/set01
 ```
 
 Version
 
-```
+```sh
 zero --version
 ```
 
 Delayed output - show STDOUT at end rather than immediate
 
-```
+```sh
 zero --delayed
 ```
 

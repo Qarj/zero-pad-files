@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-from zero import zero, set_output_immediately, set_trial_rename, clear_globals_for_unittests
+from zero import clear_globals_for_unittests, set_output_immediately, set_trial_rename, zero
 
 version = "0.2.0"
 
